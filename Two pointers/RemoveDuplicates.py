@@ -12,5 +12,6 @@ def RemoveDuplicates(nums):
     print(nums)
     return i+1
 
-nums=list(map(int,input("Enter array: ").split()))
+nums=[1,2,2,3,3,4]
+# nums=list(map(int,input("Enter array: ").split()))
 print(RemoveDuplicates(nums))
