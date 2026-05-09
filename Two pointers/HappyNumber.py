@@ -17,3 +17,5 @@ def happyNum(num):
 
 num=int(input("Num: "))
 print(happyNum(num))
+
+# o(logn)
