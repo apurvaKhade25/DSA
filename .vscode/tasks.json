@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Python",
+      "type": "shell",
+      "command": "cd ${fileDirname} && python3 \"${fileBasename}\" < input.txt > Output.txt",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
