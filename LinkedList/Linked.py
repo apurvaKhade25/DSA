@@ -1,17 +1,34 @@
-class node:
+class Node:
     def __init__(self,value):
         self.data=value
         self.next=None
 
+class LinkedList:
+    def __init__(self):
+        self.head=None
+    
+    def delete_head(self):
+        if self.head is None:
+            print("head is empty")
+            return
+        self.head=self.head.next
 
-first=node(5)
-second=node(10)
-third=node(15)
+    
+    def print_list(self):
+        temp=self.head
 
-first.next=second
-second.next=third
+        while temp:
+            print(temp.data,end='')
+            temp=temp.next
+        print('None')
 
-print(first.next,"->")
-print(second.data,"->")
-print(third.data)
+ll = LinkedList()
+ll.head = Node(10)
+ll.head.next = Node(20)
+ll.head.next.next = Node(30)
+
+ll.print_list()   # 10 → 20 → 30 → None
+ll.delete_head()
+ll.print_list()   # 20 → 30 → None
+
 
