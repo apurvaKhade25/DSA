@@ -11,7 +11,10 @@ class LinkedList:
         if self.head is None:
             print("head is empty")
             return
+        temp=self.head
         self.head=self.head.next
+        del temp
+        return self.head
 
     
     def print_list(self):
