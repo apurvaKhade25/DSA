@@ -10,18 +10,26 @@ class LinkedList:
     def delete_head(self):
         if self.head is None:
             print("head is empty")
-            return
         temp=self.head
         self.head=self.head.next
         del temp
         return self.head
 
+    def delete_tail(self):
+        if self.head is None:
+            print("No tail to delete")
+        temp=self.head
+        while temp is not None:
+            temp=temp.next
+        del temp
+        return self.head 
+            
     
     def print_list(self):
         temp=self.head
 
         while temp:
-            print(temp.data,end='')
+            print(temp.data,end='->')
             temp=temp.next
         print('None')
 
@@ -29,9 +37,11 @@ ll = LinkedList()
 ll.head = Node(10)
 ll.head.next = Node(20)
 ll.head.next.next = Node(30)
+ll.head.next.next.next=Node(40)
 
 ll.print_list()   # 10 → 20 → 30 → None
 ll.delete_head()
+ll.delete_tail()
 ll.print_list()   # 20 → 30 → None
 
 
