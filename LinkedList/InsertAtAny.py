@@ -34,12 +34,27 @@ class LinkList:
         print(None)
     
 ll = LinkList()
-ll.head = Node(10)
-ll.head.next = Node(20)
-ll.head.next.next = Node(30)
-ll.head.next.next.next=Node(40)
+# ll.head = Node(10)
+# ll.head.next = Node(20)
+# ll.head.next.next = Node(30)
+# ll.head.next.next.next=Node(40)
 
+n=int(input("Enter no of nodes: "))
+values=list(map(int,input("Enter values: ").split()))
+
+ll.head=Node(values[0])
+temp=ll.head
+
+for i in range(1,n):
+    new_node=Node(values[i])
+    temp.next=new_node
+    temp=temp.next
+
+print("Original list:")
 ll.print_list()   # 10 → 20 → 30 → None
 
-ll.InsertAt(3,55)
+pos=int(input("Enter pos: "))
+value=int(input("Enter value: "))
+ll.InsertAt(pos,value)
+print("After insertion: ")
 ll.print_list()   # 20 → 30 → None

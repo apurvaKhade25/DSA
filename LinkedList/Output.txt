@@ -1,2 +1,4 @@
-10->20->30->40->None
-10->20->30->55->40->None
+Enter no of nodes: Enter values: Original list:
+1->2->3->4->5->None
+Enter pos: Enter value: After insertion: 
+1->2->3->78->4->5->None
