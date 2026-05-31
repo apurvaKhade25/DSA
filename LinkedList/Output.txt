@@ -1,7 +1,2 @@
-Enter number of nodes: Enter values: 
-Original List:
-1->2->3->4->5->None
-
-Enter value to insert at beginning: 
-Updated List:
-88->1->2->3->4->5->None
+10->20->30->40->None
+10->20->30->55->40->None
