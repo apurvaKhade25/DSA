@@ -15,22 +15,49 @@ class LinkList:
     def print_list(self):
         if not self.head:
             print("List empty")
+
         temp=self.head
         while temp:
             print(temp.data,end="->")
             temp=temp.next
         print("None")
 
-ll = LinkList()
+ll=LinkList()
 
-n = int(input("How many nodes? "))
+# ll.head = Node(10)
+# ll.head.next = Node(20)
+# ll.head.next.next = Node(30)
 
-for _ in range(n):
+# print("Original list: ")
+# ll.print_list()
 
-    value = int(input("Enter value: "))
+# ll.insertBeg(79)
+# print("After insertion: ")
+# ll.print_list()
 
-    ll.insertBeg(value)
+n = int(input("Enter number of nodes: "))
+values = list(map(int, input("Enter values: ").split()))
 
+# Build initial linked list
+ll.head = Node(values[0])
+temp = ll.head
+
+for i in range(1, n):
+    new_node = Node(values[i])
+    temp.next = new_node
+    temp = temp.next
+
+
+print("\nOriginal List:")
 ll.print_list()
 
-print("WORKING")
+
+value = int(input("\nEnter value to insert at beginning: "))
+
+ll.insertBeg(value)
+
+print("\nUpdated List:")
+ll.print_list()
+
+
+
