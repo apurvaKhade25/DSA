@@ -19,6 +19,7 @@ class LinkList:
         while temp.next.next is not None:
             temp=temp.next
         
+        print(temp.next.next)
         temp.next=None
 
     
